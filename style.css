@@ -1,4 +1,4 @@
-/* Global ================================*/
+/* Global =================================*/
 :root {
     --dark-blue: #363f5f;
 }
@@ -37,6 +37,21 @@ h2 {
 
     font-weight: normal;
 }
+/* Links & Buttons ========================*/
+a {
+    color: #40AA26;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
 /* Header =================================*/
 header {
     background: #2D4A22;
