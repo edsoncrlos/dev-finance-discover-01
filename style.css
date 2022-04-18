@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 93.75%;
+}
+
 body {
     background: #f0f2f5;
     font-family: 'Poppins', sans-serif;
@@ -37,6 +41,7 @@ h2 {
 
     font-weight: normal;
 }
+
 /* Links & Buttons ========================*/
 a {
     color: #40AA26;
@@ -66,7 +71,7 @@ header {
 
 /* Balance ================================*/
 #balance {
-    margin-top: -8rem;
+    margin-top: -7rem;
 }
 
 #balance h2 {
@@ -104,10 +109,18 @@ header {
 }
 
 /* Table ==================================*/
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
     color: #969cb3;
+
+    overflow-x: auto;
 }
 
 table thead tr th:first-child,
@@ -162,4 +175,17 @@ footer {
     color: var(--dark-blue);
 
     opacity: 0.6;
+}
+
+/* Responsive =============================*/
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }
