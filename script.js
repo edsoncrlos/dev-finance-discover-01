@@ -42,10 +42,16 @@ const Transaction = {
         App.reload()
     },
 
+    remove(index) {
+        Transaction.all.splice(index, 1)
+
+        App.reload()
+    },
+
     incomes() {
         let income = 0
 
-        transactions.all.forEach(transaction => {
+        Transaction.all.forEach(transaction => {
             if (transaction.amount > 0) {
                 income += transaction.amount
             }
@@ -56,7 +62,7 @@ const Transaction = {
     expenses() {
         let expense = 0
 
-        transactions.all.forEach(transaction => {
+        Transaction.all.forEach(transaction => {
             if (transaction.amount < 0) {
                 expense += transaction.amount
             }
@@ -134,9 +140,9 @@ const Utils = {
 
 const App = {
     init() {
-        Transaction.all.forEach(function(transaction) {
+        Transaction.all.forEach(transaction => {
             DOM.addTransaction(transaction)
-        }) 
+        })
 
         DOM.updateBalance()
     },
@@ -147,3 +153,5 @@ const App = {
 }
 
 App.init()
+
+// Transaction.remove(1)
