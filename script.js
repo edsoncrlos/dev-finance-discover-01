@@ -13,25 +13,21 @@ const Modal = {
 
 const transactions = [
     {
-        id: 1,
         description: 'Luz',
         amount: -50000,
         date: '23/01/2021',
     },
     {
-        id: 2,
         description: 'Website',
         amount: 500000,
         date: '23/01/2021',
     },
     {
-        id: 3,
         description: 'Internet',
         amount: -20000,
         date: '23/01/2021',
     },
     {
-        id: 4,
         description: 'App',
         amount: 200000,
         date: '23/01/2021', 
@@ -149,13 +145,5 @@ const App = {
         App.init()
     },
 }
-
-
-Transaction.add({
-    id: 34,
-    description: 'ihuuu',
-    amount: 4000,
-    date: '21/01/2021'
-})
 
 App.init()
